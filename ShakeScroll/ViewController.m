@@ -73,7 +73,7 @@
 
 - (PageViewController *)viewControllerAtIndex:(NSUInteger)index
 {
-    if (([self.pageTitle count] == 0) || (index >= [self.pageTitle count])) {
+    if (index >= [self.pageTitle count]) {
         return nil;
     }
     
