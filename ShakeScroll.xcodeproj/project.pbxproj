@@ -14,6 +14,7 @@
 		C420D02119D15FCE00385D18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C420D02019D15FCE00385D18 /* Images.xcassets */; };
 		C420D02419D15FCE00385D18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C420D02219D15FCE00385D18 /* LaunchScreen.xib */; };
 		C420D03019D15FCE00385D18 /* ShakeScrollTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C420D02F19D15FCE00385D18 /* ShakeScrollTests.m */; };
+		C420D03B19D172E300385D18 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C420D03A19D172E300385D18 /* PageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		C420D02919D15FCE00385D18 /* ShakeScrollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakeScrollTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C420D02E19D15FCE00385D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C420D02F19D15FCE00385D18 /* ShakeScrollTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeScrollTests.m; sourceTree = "<group>"; };
+		C420D03919D172E300385D18 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		C420D03A19D172E300385D18 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				C420D01819D15FCD00385D18 /* AppDelegate.m */,
 				C420D01A19D15FCD00385D18 /* ViewController.h */,
 				C420D01B19D15FCD00385D18 /* ViewController.m */,
+				C420D03919D172E300385D18 /* PageViewController.h */,
+				C420D03A19D172E300385D18 /* PageViewController.m */,
 				C420D01D19D15FCD00385D18 /* Main.storyboard */,
 				C420D02019D15FCE00385D18 /* Images.xcassets */,
 				C420D02219D15FCE00385D18 /* LaunchScreen.xib */,
@@ -168,6 +173,7 @@
 				TargetAttributes = {
 					C420D00F19D15FCD00385D18 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = XGDS2S9G54;
 					};
 					C420D02819D15FCE00385D18 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -222,6 +228,7 @@
 				C420D01C19D15FCD00385D18 /* ViewController.m in Sources */,
 				C420D01919D15FCD00385D18 /* AppDelegate.m in Sources */,
 				C420D01619D15FCD00385D18 /* main.m in Sources */,
+				C420D03B19D172E300385D18 /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +350,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ShakeScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,9 +362,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ShakeScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

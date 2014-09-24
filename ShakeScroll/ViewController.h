@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PageViewController.h"
 
 @interface ViewController : UIViewController
+<UIViewControllerTransitioningDelegate, UINavigationControllerDelegate,
+UIPageViewControllerDataSource>
 
+@property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) NSArray *pageTitle;
+
+@property NSUInteger currentIndex;
 
 @end
 
