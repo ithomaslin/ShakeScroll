@@ -106,7 +106,7 @@
         return nil;
     }
     _currentIndex = index;
-    index++;
+    ++index;
     
     if (index == [self.pageTitle count]) {
         return nil;
