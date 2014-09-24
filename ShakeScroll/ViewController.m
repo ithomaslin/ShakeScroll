@@ -45,6 +45,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - ShakeGestureRecognizer
+
 - (BOOL)canBecomeFirstResponder
 {
     return YES;
@@ -83,7 +85,7 @@
     return pageViewController;
 }
 
-#pragma - UIPageViewControllerDataSource
+#pragma mark - UIPageViewControllerDataSource
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
