@@ -59,13 +59,16 @@
 
 - (void)shakeToScroll
 {
-    PageViewController *pageView = [self viewControllerAtIndex:++_currentIndex];
-    if (pageView) {
+    ++_currentIndex;
+    if (_currentIndex < self.pageTitle.count) {
+        PageViewController *pageView = [self viewControllerAtIndex:_currentIndex];
         NSArray *controllers = @[pageView];
         [self.pageViewController setViewControllers:controllers
                                           direction:UIPageViewControllerNavigationDirectionForward
                                            animated:YES
                                          completion:nil];
+    } else {
+        _currentIndex--;
     }
 }
 
