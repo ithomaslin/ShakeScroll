@@ -52,23 +52,20 @@
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    if (event.type == UIEventSubtypeMotionShake && _currentIndex < [self.pageTitle count]) {
+    if (event.type == UIEventSubtypeMotionShake) {
         [self shakeToScroll];
     }
 }
 
 - (void)shakeToScroll
 {
-    ++_currentIndex;
-    if (_currentIndex < self.pageTitle.count) {
+    if (++_currentIndex < self.pageTitle.count) {
         PageViewController *pageView = [self viewControllerAtIndex:_currentIndex];
         NSArray *controllers = @[pageView];
         [self.pageViewController setViewControllers:controllers
                                           direction:UIPageViewControllerNavigationDirectionForward
                                            animated:YES
                                          completion:nil];
-    } else {
-        _currentIndex--;
     }
 }
 
@@ -94,8 +91,8 @@
     if (index == NSNotFound) {
         return nil;
     }
-    _currentIndex = index;
     index--;
+    --_currentIndex;
     
     return [self viewControllerAtIndex:index];
 }
